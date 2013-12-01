@@ -1,0 +1,11 @@
+<h1>Hello World</h1>
+
+<div class="list" ng-repeat="todo in todos">
+     <div class="checkbox" ng-show = "todo.visible == 1">
+        <label>
+          <input type="checkbox" value="" ng-click = "deleteEvent(todo.id)"> {{todo.title}}
+        </label>
+      </div>
+</div>
+    <input type="text" ng-model='input' class="form-control" placeholder="Text input">
+    <button type="button" class="btn btn-primary" ng-click="addEvent()">送出</button><button type="button" class="btn btn-danger">刪除</button>

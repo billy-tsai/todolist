@@ -1,0 +1,26 @@
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <div class="container" ng-app ng-controller="rootController">
+    <h1>Todo list</h1>
+    <ul ng-repeat = "todo in todos">
+        <li> {{todo.title}}:{{todo.speak}}[{{todo.createdAt}}] 
+        <a ng-click = "destroyEvent(todo.id)" href = "#">delete</a>
+        </li>
+    </ul>
+    <form>
+        <table class = "table">
+        <tr>
+            <td>
+                
+                <input type="text" name="title" ng-model="title" placeholder="User name">
+            </td>
+            <td>
+                <input type="text" name="speak" ng-model="speak" placeholder="Content">
+            </td>
+            <td>
+                <input type="button" class="btn btn-primary" name="submit" value="傳送" ng-click="addEvent()">
+            </td>
+        </tr>
+        </table>
+    </form>
+    </div>
